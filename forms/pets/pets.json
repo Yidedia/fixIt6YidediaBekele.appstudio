@@ -9,71 +9,7 @@
   "borderWidth": "",
   "cached_js": null,
   "cached_js_script_hash": null,
-  "children": [
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "removeVinny.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "removeMarty.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "addNancy.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "addName.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "locateRiley.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "locateCindy.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "pets",
-        "Elements",
-        "showArray.json"
-      ]
-    }
-  ],
+  "children": [],
   "class": "",
   "designHeight": 0,
   "designWidth": 0,

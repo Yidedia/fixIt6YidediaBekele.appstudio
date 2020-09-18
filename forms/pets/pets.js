@@ -5,36 +5,49 @@ let petNames = ['Darcy', 'Jack', 'Jerry', 'Marty', 'Vito', 'Vinny', 'Riley', 'Sa
 // used an array method here --> withMarmaduke.concat(['Marmaduke']) or ---> [ ...petNames, ...['Marmaduke']]
 let withMarmaduke = petNames.concat(['Marmaduke'])
 
-//remove "Vinny" from the array
-let posVinny = petNames.indexOf('Vinny')
-petNames.splice(posVinny, 1)
-console.log(`The action taken was: Remove Vinny\nThe remaining data are:\n ${petNames}`)
-
-// remove "Marty" from the array
-let posMarty = petNames.indexOf('Marty')
-petNames.splice(posMarty, 1)
-console.log(`The action taken was: Remove Marty\nThe remaining data are:\n ${petNames}`)
-
-//add "Nancy" to the front of the array.
-petNames.unshift('Nancy')
-console.log(`The action taken was: Add Nancy to the front of the array\nThe remaining data are:\n${petNames}`)
-
-//add their name to the end of the array after they enter their name.
-let userName = prompt('Enter your first name. ')
-petNames.push(userName)
-console.log(`The action taken was: Add ${userName} to the end of the array\nThe remaining data are:\n${petNames}`)
-
-// tell the user the array index where "Riley" is located in the array. 
-let posRiley = petNames.indexOf('Riley')
-console.log(`The action taken was: find the array index of Riley\nThe array index of Riley is ${posRiley}.\nThe remaining data are:\n${petNames}`)
-
-// tell the user the array index where "Cindy" is located
-let posCindy = petNames.indexOf('Cindy')
-console.log(`The action taken was: find the array index of Cindy\nThe array index of Cindy is ${posCindy}.\nThe remaining data are:\n${petNames}`)
-
-//show the 'withMarmaduke' array data.
-//console.log(`The values of the 'withMarmaduke' array are\n${withMarmaduke}`)
-console.log(`The action taken was:show the withMarmaduke array data\n${withMarmaduke}\nThe remaining data are:\n ${petNames}`)
+let choice = prompt("Please enter 1 to remove Vinny, 2 to remove Marty, 3 to add Nancy, 4 to add your name, 5 to find index of Riley, 6 to find index of Cindy, and 7 to show the withMarmaduke array")
+switch (true) {
+    //remove "Vinny" from the array
+    case (choice == '1'):
+        let posVinny = petNames.indexOf('Vinny')
+        petNames.splice(posVinny, 1)
+        console.log(`The action taken was: Remove Vinny\nThe remaining data are:\n ${petNames}`)
+        break
+    case (choice == '2'):
+        // remove "Marty" from the array
+        let posMarty = petNames.indexOf('Marty')
+        petNames.splice(posMarty, 1)
+        console.log(`The action taken was: Remove Marty\nThe remaining data are:\n ${petNames}`)
+        break
+    case (choice == '3'):
+        //add "Nancy" to the front of the array.
+        petNames.unshift('Nancy')
+        console.log(`The action taken was: Add Nancy to the front of the array\nThe remaining data are:\n${petNames}`)
+        break
+    case (choice == '4'):
+        //add their name to the end of the array after they enter their name.
+        let userName = prompt('Enter your first name. ')
+        petNames.push(userName)
+        console.log(`The action taken was: Add ${userName} to the end of the array\nThe remaining data are:\n${petNames}`)
+        break
+    case (choice == '5'):
+        // tell the user the array index where "Riley" is located in the array. 
+        let posRiley = petNames.indexOf('Riley')
+        console.log(`The action taken was: find the array index of Riley\nThe array index of Riley is ${posRiley}.\nThe remaining data are:\n${petNames}`)
+        break
+    case (choice == '6'):
+        // tell the user the array index where "Cindy" is located
+        let posCindy = petNames.indexOf('Cindy')
+        console.log(`The action taken was: find the array index of Cindy\nThe array index of Cindy is ${posCindy}.\nThe remaining data are:\n${petNames}`)
+        break
+    case (choice == '7'):
+        //show the 'withMarmaduke' array data.
+        //console.log(`The values of the 'withMarmaduke' array are\n${withMarmaduke}`)
+        console.log(`The action taken was:show the withMarmaduke array data\n${withMarmaduke}\nThe remaining data are:\n ${petNames}`)
+        break
+    default:
+        console.log('That was not one of the options for this program')
+}
 
 // Using the original 'pets' array, use the .shift() array method and output the results.
 petNames.shift()
