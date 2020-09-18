@@ -9,6 +9,7 @@ version = "{version}">
 
 <name>{title}</name>
 <description>{description}</description>
+<preference name="phonegap-version" value="{phoneGapVersion}" />
 
 <icon src='{icon}' />
 <preference name='SplashScreenDelay' value='2000' />
@@ -22,10 +23,10 @@ version = "{version}">
 <!-- <preference name="fullscreen" value="true" /> -->
 
 <!-- Platforms: Customize as needed. -->
-<platforms>
-   <platform name="android" />
-   <platform name="ios" />
-</platforms>
+<gap:platforms>
+   <gap:platform name="android" />
+   <gap:platform name="ios" />
+</gap:platforms>
 
 <plugin name="cordova-plugin-statusbar" source="npm" />
   <preference name="StatusBarOverlaysWebView" value="{phoneGapStatusBarOverlay}" />
