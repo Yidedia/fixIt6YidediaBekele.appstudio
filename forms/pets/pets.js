@@ -43,7 +43,7 @@ switch (true) {
     case (choice == '7'):
         //show the 'withMarmaduke' array data.
         //console.log(`The values of the 'withMarmaduke' array are\n${withMarmaduke}`)
-        console.log(`The action taken was:show the withMarmaduke array data\n${withMarmaduke}\nThe remaining data are:\n ${petNames}`)
+        console.log(`The action taken was:show the withMarmaduke array data\n${withMarmaduke}\nThe remaining data are:\n${petNames}`)
         break
     default:
         console.log('That was not one of the options for this program')
