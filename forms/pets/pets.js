@@ -34,6 +34,7 @@ switch (true) {
         // tell the user the array index where "Riley" is located in the array. 
         let posRiley = petNames.indexOf('Riley')
         console.log(`The action taken was: find the array index of Riley\nThe array index of Riley is ${posRiley}.\nThe remaining data are:\n${petNames}`)
+        break
     case (choice == '6'):
         // tell the user the array index where "Cindy" is located
         let posCindy = petNames.indexOf('Cindy')
