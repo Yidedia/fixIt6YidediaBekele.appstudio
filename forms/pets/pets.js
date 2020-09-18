@@ -2,85 +2,68 @@
 let petNames = ['Darcy', 'Jack', 'Jerry', 'Marty', 'Vito', 'Vinny', 'Riley', 'Saddie', 'Marge', 'Sam']
 
 // create a new array variable
-// used an array method here --> withMarmaduke.concat(['Marmaduke])
-let withMarmaduke = [ ...petNames, ...['Marmaduke']]
+// used an array method here --> withMarmaduke.concat(['Marmaduke']) or ---> [ ...petNames, ...['Marmaduke']]
+let withMarmaduke = petNames.concat(['Marmaduke'])
 
-//Print on console
-console.log(withMarmaduke)
+//remove "Vinny" from the array
+let posVinny = petNames.indexOf('Vinny')
+petNames.splice(posVinny, 1)
+console.log(`The action taken was: Remove Vinny\nThe remaining data are:\n ${petNames}`)
 
-//remove "Vinny" from the array, remove "Marty" from the array.
-
-removeVinny.onclick=function(){
-  switch(petNames.includes("Vinny")) {
-case true: 
-  let posVinny = petNames.indexOf('Vinny')
-  petNames.splice(posVinny,1)
-  console.log(`The action taken was: Remove Vinny\nThe remaining data are:\n ${petNames}`)
-  break
-default: 
-  console.log(`Vinny was already removed and is no longer in the array\nas you can see:\n ${petNames}`)
-  }
-}
-
-removeMarty.onclick=function(){
- switch(petNames.includes("Marty")) {
-case true: 
-  let posMarty = petNames.indexOf('Marty')
-  petNames.splice(posMarty,1)
- console.log(`The action taken was: Remove Marty\nThe remaining data are:\n ${petNames}`)
-  break
-default: 
-console.log(`Marty was already removed and is no longer in the array\nas you can see:\n ${petNames}`)
-  }
-}
+// remove "Marty" from the array
+let posMarty = petNames.indexOf('Marty')
+petNames.splice(posMarty, 1)
+console.log(`The action taken was: Remove Marty\nThe remaining data are:\n ${petNames}`)
 
 //add "Nancy" to the front of the array.
+petNames.unshift('Nancy')
+console.log(`The action taken was: Add Nancy to the front of the array\nThe remaining data are:\n${petNames}`)
 
-addNancy.onclick=function(){
-  switch(petNames.includes("Nancy")) {
-case false: 
-  petNames.unshift('Nancy')
-  console.log(`The action taken was: Add Nancy to the front of the array\nThe remaining data are:\n${petNames}`)
-  break
-default: 
-  console.log(`Nancy was already added to the front of the array,\nas you can see:\n${petNames}`)
-  }
-}
-
-//add their name to the end of the array.
-
-addName.onclick=function(){
- let userName = prompt('Enter your first name. ')
- 
- switch(petNames.includes(userName)) {
-case false: 
-  petNames.push(userName)
-  console.log(`The action taken was: Add ${userName} to the end of the array\nThe remaining data are:\n${petNames}`)
-  break
-default: 
-  console.log(`${userName} was already added to the end of the array,\nas you can see:\n${petNames}`)
-  }
-}
+//add their name to the end of the array after they enter their name.
+let userName = prompt('Enter your first name. ')
+petNames.push(userName)
+console.log(`The action taken was: Add ${userName} to the end of the array\nThe remaining data are:\n${petNames}`)
 
 // tell the user the array index where "Riley" is located in the array. 
-
-locateRiley.onclick=function(){
 let posRiley = petNames.indexOf('Riley')
 console.log(`The action taken was: find the array index of Riley\nThe array index of Riley is ${posRiley}.\nThe remaining data are:\n${petNames}`)
 
-}
-
 // tell the user the array index where "Cindy" is located
-
-locateCindy.onclick=function(){
 let posCindy = petNames.indexOf('Cindy')
 console.log(`The action taken was: find the array index of Cindy\nThe array index of Cindy is ${posCindy}.\nThe remaining data are:\n${petNames}`)
 
-}
-
 //show the 'withMarmaduke' array data.
+//console.log(`The values of the 'withMarmaduke' array are\n${withMarmaduke}`)
+console.log(`The action taken was:show the withMarmaduke array data\n${withMarmaduke}\nThe remaining data are:\n ${petNames}`)
 
-showArray.onclick=function(){
-console.log(`The values of the withMarmaduke array are\n${withMarmaduke}`)
-console.log(`The action taken was:show the withMarmaduke array data\nThe remaining data are:\n ${petNames}`)
-}
+// Using the original 'pets' array, use the .shift() array method and output the results.
+petNames.shift()
+console.log(`The action taken was: removes the first element from an array\nThe remaining data are:\n${petNames}`)
+
+//Using the .unshift() array method, add the name 'Barney' to the petNames array.
+petNames.unshift('Barney')
+console.log(`The action taken was: add the name Barney\nThe remaining data are:\n${petNames}`)
+
+/* Using an array method of your choice, 
+add the array below to the end of the petNames array 
+to make a new array that you name allPets. 
+Remember to show the new array in the output. 
+Ted, Fred, Jed, Ned, Ed, Zed
+*/
+let allPets = petNames.push('Ted', 'Fred', 'Jed', 'Ned', 'Ed', 'Zed')
+console.log(`The action taken was: use .push() to add Ted, Fred, Jed, Ned, Ed, Zed \nThe new data are:\n${petNames}`)
+
+/*
+Using the array method .join(), 
+create a string variable named stringPets 
+that holds all of the pet names separated by commas.
+*/
+let stringPets = petNames.join(', ')
+console.log(`The action taken was: create a string variable that holds all of the pet names separated by commas\nThe output is:\n${stringPets}`)
+
+/*
+Using the .unshift() array method, 
+add the name 'Agnes' to the petNames array. 
+*/
+petNames.unshift('Agnes')
+console.log(`The action taken was: adds Agnes to the beginning of an array \nThe new data are:\n${petNames}`)
