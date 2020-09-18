@@ -5,7 +5,7 @@ let petNames = ['Darcy', 'Jack', 'Jerry', 'Marty', 'Vito', 'Vinny', 'Riley', 'Sa
 // used an array method here --> withMarmaduke.concat(['Marmaduke']) or ---> [ ...petNames, ...['Marmaduke']]
 let withMarmaduke = petNames.concat(['Marmaduke'])
 
-let choice = prompt("Please enter 1 to remove Vinny, 2 to remove Marty, 3 to add Nancy, 4 to add your name, 5 to find index of Riley, 6 to find index of Cindy, and 7 to show the withMarmaduke array")
+let choice = prompt("Please enter 1 to remove Vinny, 2 to remove Marty, 3 to add Nancy, 4 to add your name, 5 to find index of Riley, 6 to find index of Cindy, 7 to show the withMarmaduke array,/n 8 to use the .shift() array method, 9 to add the name Barney, 10 to ")
 switch (true) {
     //remove "Vinny" from the array
     case (choice == '1'):
@@ -63,8 +63,8 @@ to make a new array that you name allPets.
 Remember to show the new array in the output. 
 Ted, Fred, Jed, Ned, Ed, Zed
 */
-let allPets = petNames.push('Ted', 'Fred', 'Jed', 'Ned', 'Ed', 'Zed')
-console.log(`The action taken was: use .push() to add Ted, Fred, Jed, Ned, Ed, Zed \nThe new data are:\n${petNames}`)
+let allPets = petNames.concat('Ted', 'Fred', 'Jed', 'Ned', 'Ed', 'Zed')
+console.log(`The action taken was: create variable allPets, to add Ted, Fred, Jed, Ned, Ed, Zed to the end of the petNames array \nThe new array allPets is:\n${allPets}\nThe petNames array is unchanged\n${petNames}`)
 
 /*
 Using the array method .join(), 
@@ -72,7 +72,7 @@ create a string variable named stringPets
 that holds all of the pet names separated by commas.
 */
 let stringPets = petNames.join(', ')
-console.log(`The action taken was: create a string variable that holds all of the pet names separated by commas\nThe output is:\n${stringPets}`)
+console.log(`The action taken was: create a string variable that holds all of the pet names separated by commas\nThe output is:\n${stringPets}\nThe petNames array is unchanged\n${petNames}`)
 
 /*
 Using the .unshift() array method, 
