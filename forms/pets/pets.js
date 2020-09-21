@@ -3,7 +3,9 @@ let petNames = ['Darcy', 'Jack', 'Jerry', 'Marty', 'Vito', 'Vinny', 'Riley', 'Sa
 
 // create a new array variable
 // used an array method here --> withMarmaduke.concat(['Marmaduke']) or ---> [ ...petNames, ...['Marmaduke']]
-let withMarmaduke = petNames.concat(['Marmaduke'])
+let withMarmaduke = []
+withMarmaduke.push(petNames)
+withMarmaduke.push('Marmaduke')
 
 let choice = prompt("Please enter 1 to remove Vinny, 2 to remove Marty, 3 to add Nancy, 4 to add your name, 5 to find index of Riley, 6 to find index of Cindy, 7 to show the withMarmaduke array,/n 8 to use the .shift() array method, 9 to add the name Barney, 10 to ")
 switch (true) {
